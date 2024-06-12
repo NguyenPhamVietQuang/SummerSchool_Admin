@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "singularName": "course",
+    "pluralName": "courses",
+    "displayName": "Course",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "teacher": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::teacher.teacher",
+      "inversedBy": "courses"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "course_orders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::course-order.course-order",
+      "mappedBy": "courses"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "numberOfSessions": {
+      "type": "biginteger"
+    },
+    "endDate": {
+      "type": "date"
+    }
+  }
+}

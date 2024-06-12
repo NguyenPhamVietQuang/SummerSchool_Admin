@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "course_orders",
+  "info": {
+    "singularName": "course-order",
+    "pluralName": "course-orders",
+    "displayName": "CourseOrder",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "course_orders"
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::course.course",
+      "inversedBy": "course_orders"
+    },
+    "note": {
+      "type": "text"
+    }
+  }
+}

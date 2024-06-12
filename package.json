@@ -1,0 +1,43 @@
+{
+  "name": "summer-school",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "dev": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "generate": "strapi generate"
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "4.24.4",
+    "@strapi/plugin-documentation": "^4.24.4",
+    "@strapi/plugin-i18n": "4.24.4",
+    "@strapi/plugin-users-permissions": "^4.24.4",
+    "@strapi/strapi": "4.24.4",
+    "class-validator": "^0.14.1",
+    "i": "^0.3.7",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "mysql": "2.18.1",
+    "npm": "^10.8.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "5.3.4",
+    "strapi-plugin-import-export-entries": "^1.23.1",
+    "styled-components": "5.3.3",
+    "xlsx": "^0.18.5"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "a9213569-ad5f-4b2a-b8d6-01ff7873bd40"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
